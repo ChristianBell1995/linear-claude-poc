@@ -1,0 +1,15 @@
+{
+  "name": "linear-claude-poc",
+  "private": true,
+  "type": "module",
+  "description": "Label a Linear issue `claude`, get a draft PR. No dependencies; nothing to install.",
+  "scripts": {
+    "start": "node --experimental-strip-types --env-file=.env src/server.ts",
+    "selftest": "node --experimental-strip-types src/selftest.ts",
+    "typecheck": "node ../my-app/node_modules/typescript/bin/tsc -p tsconfig.json --typeRoots ../my-app/node_modules/@types",
+    "stub": "CLAUDE_STUB=1 node --experimental-strip-types --env-file=.env src/server.ts",
+    "whoami": "node --experimental-strip-types --env-file-if-exists=.env src/whoami.ts",
+    "send": "node --experimental-strip-types --env-file=.env src/send-test-webhook.ts",
+    "tunnel": "cloudflared tunnel --url http://localhost:3939"
+  }
+}

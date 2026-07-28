@@ -1,0 +1,6 @@
+.env
+state.json
+state.json.tmp
+logs/
+worktrees/
+.DS_Store
